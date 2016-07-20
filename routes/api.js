@@ -3,4 +3,6 @@
 var express = require('express');
 var router = express.Router();
 
-router('/clients', './clients');
+router.use('/clients', require('./clients') );
+
+module.exports = router;

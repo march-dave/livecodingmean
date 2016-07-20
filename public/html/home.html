@@ -1,17 +1,35 @@
 <div style="margin: 10%; padding: 10%">
   <div>
-    <input type="text" placeholder="ID">
+    <input type="text" placeholder="ID" ng-model="client.clientID">
   </div>
 
   <div>
-    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Name" ng-model="client.clientName">
   </div>
 
   <div>
-    <input type="text" placeholder="Age" ng-model="age">
+    <input type="text" placeholder="Age" ng-model="client.clientAge">
   </div>
 
   <div>
-      <input type="submit" text="submit" ng-onclick="submit()">
+      <input type="submit" text="submit" ng-click="submit()">
   </div>
 </div>
+
+  <div>
+    <button ng-click="read()">Read</button>
+  </div>
+
+  <div>
+      <div ng-repeat="client in resClient">
+        {{client.clientID}}
+        {{client.clientName}}
+        {{client.clientAge}}
+      </div>
+  </div>
+
+
+
+  <div>
+    <button ng-click="delete()">Delete</button>
+  </div>

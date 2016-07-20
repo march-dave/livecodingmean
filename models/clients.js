@@ -3,12 +3,10 @@
 var mongoose = require('mongoose');
 
 var clientSchema = new mongoose.Schema({
-
   clientID: {type: String},
   clientName: {type: String},
-  clientAge: {type: number}
-
+  clientAge: {type: String}
 });
 
 var Client = mongoose.model('Client', clientSchema);
-moduel.exports = Client;
+module.exports = Client;
