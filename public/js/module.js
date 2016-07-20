@@ -1,8 +1,8 @@
 'use strict';
 
-var app = angluar.module('myapp', [ui.router]);
+var app = angular.module('myapp', ['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider) ) {
+app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state('home', {
     url : '/',
@@ -11,5 +11,4 @@ app.config(function($stateProvider, $urlRouterProvider) ) {
   })
 
   $urlRouterProvider.otherwise('/');
-
-}
+});
