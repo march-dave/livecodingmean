@@ -17,11 +17,10 @@ app.controller('homeCtrl', function($scope, $http, $state) {
   }
 
   $scope.delete = function(objId) {
-    console.log('objectid delete', `${objId}`);
+    $http.delete('/api/clients/'+objId).then(res => {
+      $state.go('home');
+    });
 
-    var id = objId;
-    // $http.delete('/api/clients/`${objId}`');
-    $http.delete('/api/clients/'+id);
   }
 
   // $http.get('/api/clients').then( res => {
