@@ -11,13 +11,15 @@ app.controller('homeCtrl', function($scope, $http, $state) {
   $scope.read = function() {
 
     $http.get('/api/clients').then(res => {
-      console.log('read', res);
+      // console.log('read', res);
       $scope.resClient = res.data;
     });
   }
 
-  $scope.delete = function() {
-    $http.delete('/api/delete/`${578fd7c962d65bfb0e2d6b60}`');
+  $scope.delete = function(objId) {
+    console.log('objectid delete', `${objId}`);
+    // $http.delete('/api/clients/`${objId}`');
+    $http.delete('/api/clients/`${objId}`');
   }
 
   // $http.get('/api/clients').then( res => {
