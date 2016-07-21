@@ -23,6 +23,12 @@ app.controller('homeCtrl', function($scope, $http, $state) {
 
   }
 
+  $scope.update = function(objId) {
+
+    console.log('update', objId);
+
+  }
+
   // $http.get('/api/clients').then( res => {
   //   $scope.clientList = res;
   // });
