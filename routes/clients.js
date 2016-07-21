@@ -18,7 +18,6 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
 
   // console.log('req.body', req.body);
-
   var client = new Client(req.body);
 
   console.log('client', client);
@@ -41,11 +40,10 @@ router.put('/:id', (req, res) => {
 //delete
 router.delete('/:id', (req, res) => {
 
-  console.log('req');
+  Client.findByIdAndRemove(req.param.id, (err, properties) => {
+    res.status(err ? 400 : 200).send(err || properties);
+  })
 
-  // Client.findByIdAndRemove(req.param.id, (err, properties) => {
-  //     res.status(err ? 400 : 200).send(err || properties);
-  // })
 });
 
 module.exports = router;
