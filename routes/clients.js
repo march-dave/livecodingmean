@@ -20,8 +20,6 @@ router.post('/', (req, res) => {
   // console.log('req.body', req.body);
   var client = new Client(req.body);
 
-  console.log('client', client);
-
   client.save( (err, properties) => {
     res.status(err ? 400 : 200).send(err || properties);
 
@@ -39,8 +37,7 @@ router.put('/:id', (req, res) => {
 
 //delete
 router.delete('/:id', (req, res) => {
-
-  Client.findByIdAndRemove(req.param.id, (err, properties) => {
+  Client.findByIdAndRemove(req.params.id, (err, properties) => {
     res.status(err ? 400 : 200).send(err || properties);
   })
 

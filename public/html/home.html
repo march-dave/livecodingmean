@@ -20,16 +20,18 @@
     <button ng-click="read()">Read</button>
   </div>
 
-  <div>
-      <div ng-repeat="client in resClient">
-        {{client.clientID}}
-        {{client.clientName}}
-        {{client.clientAge}}
-      </div>
-  </div>
+  <table>
+    <th>Object Id</th>
+    <th>Client ID</th>
+    <th>Client Name</th>
+    <th>Client Age</th>
+    <th>ETC</th>
+    <tr ng-repeat="client in resClient">
+      <td>{{client._id}}</td>
+      <td>{{client.clientID}}</td>
+      <td>{{client.clientName}}</td>
+      <td>{{client.clientAge}}</td>
+      <td><button ng-click="delete()">Delete</button></td>
+    </tr>
 
-
-
-  <div>
-    <button ng-click="delete()">Delete</button>
-  </div>
+  </table>
