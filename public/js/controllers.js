@@ -18,8 +18,10 @@ app.controller('homeCtrl', function($scope, $http, $state) {
 
   $scope.delete = function(objId) {
     console.log('objectid delete', `${objId}`);
+
+    var id = objId;
     // $http.delete('/api/clients/`${objId}`');
-    $http.delete('/api/clients/`${objId}`');
+    $http.delete('/api/clients/'+id);
   }
 
   // $http.get('/api/clients').then( res => {
