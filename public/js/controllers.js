@@ -25,7 +25,7 @@ app.controller('homeCtrl', function($scope, $http, $state) {
 
   $scope.update = function(client) {
 
-    // $http.put('/api/client/'+$scope.client.clientid, $scope.client);
+    $http.put('/api/client/'+$scope.client.clientid, $scope.client);
 
     console.log('update', $scope.client);
 
