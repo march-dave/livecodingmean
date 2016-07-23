@@ -29,9 +29,11 @@ router.post('/', (req, res) => {
 
 // put
 router.put('/:id', (req, res) => {
-  Client.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true}, (err, properties) => {
-    res.status(err ? 400 : 200).send(err || properties);
-  });
+
+  console.log('push');
+  // Client.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true}, (err, properties) => {
+  //   res.status(err ? 400 : 200).send(err || properties);
+  // });
 })
 
 //delete
