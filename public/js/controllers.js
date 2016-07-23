@@ -11,14 +11,13 @@ app.controller('homeCtrl', function($scope, $http, $state) {
   $scope.read = function() {
 
     $http.get('/api/clients').then(res => {
-      // console.log('read', res);
       $scope.resClient = res.data;
     });
   }
 
   $scope.delete = function(objId) {
     $http.delete('/api/clients/'+objId).then(res => {
-      $state.go('home');
+      // $state.go('home');
     });
 
   }
@@ -26,9 +25,7 @@ app.controller('homeCtrl', function($scope, $http, $state) {
   $scope.update = function(client) {
 
     $http.put('/api/client/'+$scope.client.clientid, $scope.client);
-
     console.log('update', $scope.client);
-
   }
 
   // $http.get('/api/clients').then( res => {
