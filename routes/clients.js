@@ -13,11 +13,10 @@ router.get('/', (req, res) => {
 
 //get by Id
 router.get('/:id', (req, res) => {
-  // client.findById(req.params.id, (err, cls) => {
-  //   res.status(err ? 400 : 200).send(err || cls);
-  // });
+  Client.findById(req.params.id, (err, cls) => {
+    res.status(err ? 400 : 200).send(err || cls);
+  });
 });
-
 
 // post
 router.post('/', (req, res) => {

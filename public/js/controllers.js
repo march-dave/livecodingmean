@@ -18,8 +18,6 @@ app.controller('homeCtrl', function($scope, $http, $state) {
     $http.delete('/api/clients/'+objId);
   }
 
-  
-
   $scope.update = function(client) {
 
     console.log('client', client);
