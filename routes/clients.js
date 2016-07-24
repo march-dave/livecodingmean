@@ -8,11 +8,16 @@ var Client = require('../models/clients');
 router.get('/', (req, res) => {
   Client.find({}, (err,  properties) => {
     res.status(err ? 400 : 200).send( err || properties);
-
-    console.log('properties', properties);
-
   });
 });
+
+//get by Id
+router.get('/:id', (req, res) => {
+  // client.findById(req.params.id, (err, cls) => {
+  //   res.status(err ? 400 : 200).send(err || cls);
+  // });
+});
+
 
 // post
 router.post('/', (req, res) => {
