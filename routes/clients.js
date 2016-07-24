@@ -16,24 +16,17 @@ router.get('/', (req, res) => {
 
 // post
 router.post('/', (req, res) => {
-
-  // console.log('req.body', req.body);
   var client = new Client(req.body);
-
   client.save( (err, properties) => {
     res.status(err ? 400 : 200).send(err || properties);
-
-    // console.log('properties', properties);
   });
 })
 
 // put
 router.put('/:id', (req, res) => {
-
-  console.log('push');
-  // Client.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true}, (err, properties) => {
-  //   res.status(err ? 400 : 200).send(err || properties);
-  // });
+  Client.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true}, (err, properties) => {
+    res.status(err ? 400 : 200).send(err || properties);
+  });
 })
 
 //delete

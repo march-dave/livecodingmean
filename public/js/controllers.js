@@ -5,6 +5,8 @@ var app = angular.module('myapp');
 app.controller('homeCtrl', function($scope, $http, $state) {
 
   $scope.submit = function() {
+
+      // console.log('$scope.client', JSON.stringify($scope.client) );
       $http.post('/api/clients', $scope.client);
   }
 
@@ -20,15 +22,6 @@ app.controller('homeCtrl', function($scope, $http, $state) {
   }
 
   $scope.update = function(client) {
-
-    console.log('update', $scope);
-    // $http.put('/api/client/'+$scope.client.clientid, $scope.client);
-    // console.log('update', $scope.client);
+    $http.put('/api/clients/'+client._id, client);
   }
 });
-
-// app.controller('homeCtrl', function($scope, $http, $state) {
-// app.controller('ParentCtrl', function($scope) {
-//
-//
-// });
