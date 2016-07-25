@@ -22,6 +22,6 @@ app.controller('homeCtrl', function($scope, $http, $state) {
 
     console.log('client', client);
 
-    // $http.put('/api/clients/'+client._id, client);
+    $http.put('/api/clients/'+client._id, client);
   }
 });
