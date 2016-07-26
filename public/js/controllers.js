@@ -20,8 +20,12 @@ app.controller('homeCtrl', function($scope, $http, $state) {
 
   $scope.update = function(client) {
 
-    console.log('client', client);
+    $http.get('/api/clients/'+client._id).then( res => {
+      console.log('res', res.data);
+    });
+    
 
-    $http.put('/api/clients/'+client._id, client);
+    // $http.put('/api/clients/'+client._id, client);
+
   }
 });
