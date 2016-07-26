@@ -19,7 +19,6 @@ app.controller('homeCtrl', function($scope, $http, $state) {
   }
 
   $scope.update = function(client) {
-
     $http.get('/api/clients/'+client._id).then( res => {
       console.log('res', res.data);
       $scope.client = res.data;

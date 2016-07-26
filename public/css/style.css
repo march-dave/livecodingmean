@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+#registration {
+  margin: 10%;
+  padding: 10%;
+}
+
+ul li {
+  color: #5cb85c;
+}
