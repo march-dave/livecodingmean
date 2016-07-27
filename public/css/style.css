@@ -12,6 +12,10 @@ a {
   padding: 10%;
 }
 
-ul li {
+ul li:first-child {
   color: #5cb85c;
+}
+
+ul li {
+  display: inline;
 }
