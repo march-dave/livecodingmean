@@ -4,8 +4,8 @@ https://serene-crag-49097.herokuapp.com/
 
  ## 1. what will be the result of the following code?
 
- for(var i=0; i<10; i++) {
+ for(var i=0; i<5; i++) {
    setTimeout(function() {
-     console.log(i)
+     console.log(i);
     }, 0);
  }

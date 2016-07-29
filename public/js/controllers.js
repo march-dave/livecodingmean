@@ -5,11 +5,13 @@ var app = angular.module('myapp');
 app.controller('homeCtrl', function($scope, $http, $state) {
 
   $scope.submit = function() {
+      // console.log('$scope.client', $scope.client);
       $http.post('/api/clients', $scope.client);
   }
 
   $scope.read = function() {
     $http.get('/api/clients').then(res => {
+      // console.log('res.data', res.data);
       $scope.resClient = res.data;
     });
   }
