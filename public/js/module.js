@@ -10,4 +10,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
     controller: 'homeCtrl'
   })
 
+  $urlRouterProvider.otherwise('/');
 });
